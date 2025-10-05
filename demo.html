@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Sistema Muscular 3D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .demo-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .launch-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .launch-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+        .screenshot {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            border-radius: 10px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .instructions {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏋️ Sistema Muscular 3D</h1>
+        <p style="text-align: center; font-size: 1.2em; margin-bottom: 30px;">
+            Explore as diferenças anatômicas entre os sistemas musculares masculino e feminino
+        </p>
+        
+        <div class="demo-section">
+            <h2>🎯 Características Principais</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🔬 Modelos 3D Realistas</h3>
+                    <p>Representação visual detalhada dos principais grupos musculares com geometrias 3D precisas.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Comparação Anatômica</h3>
+                    <p>Diferenciações claras entre as características musculares masculinas e femininas.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎬 Animações Interativas</h3>
+                    <p>Rotação automática suave e controles manuais para exploração completa.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Interface Responsiva</h3>
+                    <p>Design moderno que funciona perfeitamente em desktop e dispositivos móveis.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎮 Como Usar</h2>
+            <div class="instructions">
+                <ol>
+                    <li><strong>Seleção de Modelo:</strong> Use os botões "Masculino" e "Feminino" para alternar entre os modelos</li>
+                    <li><strong>Controles de Animação:</strong> Play para iniciar rotação, Pause para parar, Reset para voltar à posição inicial</li>
+                    <li><strong>Velocidade:</strong> Ajuste o slider para controlar a velocidade de rotação</li>
+                    <li><strong>Navegação 3D:</strong> Use o mouse para rotacionar, fazer zoom e navegar na cena</li>
+                    <li><strong>Destaque de Músculos:</strong> Clique nos músculos na lista para destacá-los no modelo 3D</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>💪 Músculos Incluídos</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Parte Superior</h4>
+                    <ul>
+                        <li>Peitorais</li>
+                        <li>Deltoides</li>
+                        <li>Bíceps</li>
+                        <li>Tríceps</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Core</h4>
+                    <ul>
+                        <li>Abdominais</li>
+                        <li>Oblíquos</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h4>Parte Inferior</h4>
+                    <ul>
+                        <li>Quadríceps</li>
+                        <li>Glúteos</li>
+                        <li>Isquiotibiais</li>
+                        <li>Panturrilhas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🚀 Lançar Aplicação</h2>
+            <div style="text-align: center;">
+                <a href="index.html" class="launch-btn">🎯 Abrir Sistema Muscular 3D</a>
+            </div>
+            <div class="screenshot">
+                🏋️‍♂️ Visualização 3D Interativa
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🛠️ Tecnologias</h2>
+            <p>Esta aplicação foi desenvolvida usando tecnologias web modernas:</p>
+            <ul>
+                <li><strong>Three.js:</strong> Biblioteca 3D para JavaScript</li>
+                <li><strong>WebGL:</strong> Renderização 3D acelerada por hardware</li>
+                <li><strong>HTML5/CSS3:</strong> Interface e estilização responsiva</li>
+                <li><strong>JavaScript ES6:</strong> Lógica da aplicação com classes modernas</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
