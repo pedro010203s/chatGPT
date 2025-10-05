@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary, .btn-info {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+    color: white;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+}
+
+.btn-info {
+    background: linear-gradient(45deg, #45b7d1, #96c93d);
+    color: white;
+    box-shadow: 0 4px 15px rgba(69, 183, 209, 0.3);
+}
+
+.btn-info:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(69, 183, 209, 0.4);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.viewer-container {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    min-height: 600px;
+    backdrop-filter: blur(10px);
+}
+
+#muscleViewer {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    background: radial-gradient(circle, #1a1a2e 0%, #16213e 100%);
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.info-panel {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.info-panel h3, .info-panel h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.info-panel p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.muscle-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.muscle-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding-left: 20px;
+    position: relative;
+}
+
+.muscle-info li:before {
+    content: "💪";
+    position: absolute;
+    left: 0;
+}
+
+.muscle-info li:hover {
+    background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+    transform: translateX(5px);
+    color: #2c3e50;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary, .btn-secondary, .btn-info {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

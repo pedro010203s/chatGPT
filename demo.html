@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração - Sistema Muscular 3D</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .demo-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-card">
+        <h1>🦴 Sistema Muscular 3D</h1>
+        <p>Explore a anatomia humana de forma interativa com modelos 3D detalhados do sistema muscular masculino e feminino.</p>
+
+        <a href="index.html" class="btn">🚀 Iniciar Exploração</a>
+    </div>
+
+    <div class="demo-card">
+        <h2>✨ Recursos Principais</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <h3>🔄 Toggle M/F</h3>
+                <p>Alterne instantaneamente entre modelos masculino e feminino</p>
+            </div>
+            <div class="feature-item">
+                <h3>🎮 Controles 3D</h3>
+                <p>Rotacione, zoom e explore em 360 graus</p>
+            </div>
+            <div class="feature-item">
+                <h3>💡 Info Interativa</h3>
+                <p>Clique nos músculos para informações detalhadas</p>
+            </div>
+            <div class="feature-item">
+                <h3>📱 Responsivo</h3>
+                <p>Funciona perfeitamente em todos os dispositivos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-card">
+        <h2>🎯 Como Usar</h2>
+        <ol>
+            <li><strong>Explorar:</strong> Use o mouse para rotacionar o modelo 3D</li>
+            <li><strong>Zoom:</strong> Role a rodinha do mouse para aproximar/afastar</li>
+            <li><strong>Alternar:</strong> Clique em "Alternar" para ver masculino/feminino</li>
+            <li><strong>Aprender:</strong> Clique nos músculos coloridos para informações</li>
+            <li><strong>Resetar:</strong> Use o botão para voltar à posição inicial</li>
+        </ol>
+    </div>
+
+    <div class="demo-card">
+        <p><strong>🌐 Servidor rodando em:</strong> <code>http://localhost:8000</code></p>
+        <p>Acesse <a href="index.html" style="color: #ff6b6b;">index.html</a> para começar!</p>
+    </div>
+</body>
+</html>

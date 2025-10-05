@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Muscular 3D - Masculino e Feminino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema Muscular Humano 3D</h1>
+            <div class="controls">
+                <button id="toggleGender" class="btn-primary">Alternar: Masculino</button>
+                <button id="resetView" class="btn-secondary">Resetar Visualização</button>
+                <button id="infoBtn" class="btn-info">Informações</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="viewer-container">
+                <div id="muscleViewer"></div>
+                <div class="loading" id="loading">Carregando modelo 3D...</div>
+            </div>
+
+            <div class="info-panel" id="infoPanel">
+                <h3>Sobre o Sistema Muscular</h3>
+                <p>O sistema muscular humano é composto por mais de 600 músculos que trabalham em conjunto para permitir movimento, postura e funções vitais.</p>
+                <div class="muscle-info">
+                    <h4>Músculos Principais:</h4>
+                    <ul id="muscleList">
+                        <li>Deltoide - Ombro</li>
+                        <li>Bíceps - Braço</li>
+                        <li>Tríceps - Braço</li>
+                        <li>Peitoral - Peito</li>
+                        <li>Abdômen - Tronco</li>
+                        <li>Quadríceps - Coxa</li>
+                        <li>Gastrocnêmio - Panturrilha</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Educação Anatômica Interativa - Clique nos músculos para mais informações</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
