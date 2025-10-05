@@ -1,0 +1,21 @@
+:root{--bg:#0b1020;--panel:#111a33;--text:#e7efff;--muted:#9db1d9;--accent:#5ad1ff;--accent2:#f86fb5}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;background:radial-gradient(1200px 600px at 80% -10%, #13224b 0%, #0b1020 60%), var(--bg);color:var(--text);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"}
+#root{display:grid;grid-template-rows:auto 1fr;}
+.header{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid #223}
+.header h1{font-size:16px;letter-spacing:.5px;margin:0;font-weight:600}
+.header .spacer{flex:1}
+.header .badge{font-size:12px;color:var(--muted)}
+.panel{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:8px;background:rgba(10,16,35,.9);backdrop-filter: blur(6px);padding:12px 12px;border:1px solid #233;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.panel h2{font-size:12px;margin:0 0 8px 0;color:var(--muted);font-weight:600}
+.row{display:flex;align-items:center;gap:8px}
+select,button,input[type=range]{appearance:none;background:#0c193a;color:var(--text);border:1px solid #2b3f66;border-radius:8px;padding:8px 10px;font-size:12px}
+button{cursor:pointer}
+button.primary{background:linear-gradient(90deg, var(--accent), var(--accent2));border:none;color:#091224;font-weight:700}
+button:disabled{opacity:.6;cursor:not-allowed}
+.small{font-size:12px;color:var(--muted)}
+.canvas-wrap{position:relative;height:100%;}
+.overlay{position:absolute;right:12px;top:12px;max-width:340px;background:rgba(10,16,35,.92);border:1px dashed #355;padding:12px;border-radius:10px}
+.overlay code{background:#0f1b3a;color:#aee5ff;padding:2px 6px;border-radius:6px}
+.legend{position:absolute;left:12px;bottom:12px;font-size:12px;color:var(--muted);background:rgba(0,0,0,.25);padding:8px 10px;border-radius:8px;border:1px solid #233}
