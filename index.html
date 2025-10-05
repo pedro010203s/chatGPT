@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Muscular 3D - Masculino e Feminino</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Sistema Muscular 3D</h1>
+            <p>Visualização Interativa do Sistema Muscular Masculino e Feminino</p>
+        </header>
+
+        <!-- Canvas Container -->
+        <div id="canvas-container">
+            <canvas id="muscleCanvas"></canvas>
+            
+            <!-- Loading Screen -->
+            <div id="loading">
+                <div class="spinner"></div>
+                <p>Carregando modelo 3D...</p>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel">
+            <!-- Gender Selection -->
+            <div class="control-group">
+                <h3>Gênero</h3>
+                <div class="button-group">
+                    <button id="maleBtn" class="control-btn active">Masculino</button>
+                    <button id="femaleBtn" class="control-btn">Feminino</button>
+                </div>
+            </div>
+
+            <!-- View Controls -->
+            <div class="control-group">
+                <h3>Visualização</h3>
+                <div class="button-group">
+                    <button id="frontBtn" class="control-btn">Vista Frontal</button>
+                    <button id="backBtn" class="control-btn">Vista Posterior</button>
+                    <button id="sideBtn" class="control-btn">Vista Lateral</button>
+                </div>
+            </div>
+
+            <!-- Muscle Groups -->
+            <div class="control-group">
+                <h3>Grupos Musculares</h3>
+                <div class="muscle-list">
+                    <button class="muscle-btn" data-muscle="chest">Peitoral</button>
+                    <button class="muscle-btn" data-muscle="shoulders">Deltoides</button>
+                    <button class="muscle-btn" data-muscle="biceps">Bíceps</button>
+                    <button class="muscle-btn" data-muscle="triceps">Tríceps</button>
+                    <button class="muscle-btn" data-muscle="abs">Abdominais</button>
+                    <button class="muscle-btn" data-muscle="back">Dorsais</button>
+                    <button class="muscle-btn" data-muscle="quadriceps">Quadríceps</button>
+                    <button class="muscle-btn" data-muscle="hamstrings">Isquiotibiais</button>
+                    <button class="muscle-btn" data-muscle="calves">Panturrilhas</button>
+                    <button class="muscle-btn" data-muscle="glutes">Glúteos</button>
+                </div>
+            </div>
+
+            <!-- Animation Controls -->
+            <div class="control-group">
+                <h3>Animação</h3>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="autoRotate" checked>
+                    <span>Rotação Automática</span>
+                </label>
+                <label class="slider-label">
+                    <span>Velocidade</span>
+                    <input type="range" id="speedSlider" min="0.1" max="3" step="0.1" value="1">
+                </label>
+            </div>
+
+            <!-- Display Options -->
+            <div class="control-group">
+                <h3>Opções de Exibição</h3>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="showLabels" checked>
+                    <span>Mostrar Etiquetas</span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="wireframe">
+                    <span>Modo Wireframe</span>
+                </label>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="control-group">
+                <button id="resetBtn" class="control-btn full-width">Resetar Visualização</button>
+            </div>
+        </div>
+
+        <!-- Info Panel -->
+        <div id="infoPanel" class="info-panel hidden">
+            <button class="close-btn" id="closeInfo">×</button>
+            <h3 id="infoTitle">Músculo</h3>
+            <p id="infoDescription">Descrição do músculo...</p>
+            <ul id="infoFunctions"></ul>
+        </div>
+    </div>
+
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="muscle-animation.js"></script>
+</body>
+</html>
