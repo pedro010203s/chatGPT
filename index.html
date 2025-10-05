@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Muscular 3D - Masculino e Feminino</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Sistema Muscular 3D</h1>
+            <p>Explore a anatomia muscular masculina e feminina</p>
+        </header>
+
+        <!-- Controls Panel -->
+        <div class="controls-panel">
+            <div class="control-group">
+                <label>Gênero:</label>
+                <div class="button-group">
+                    <button id="maleBtn" class="control-btn active">Masculino</button>
+                    <button id="femaleBtn" class="control-btn">Feminino</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Grupos Musculares:</label>
+                <div class="muscle-groups">
+                    <button class="muscle-btn active" data-group="all">Todos</button>
+                    <button class="muscle-btn" data-group="chest">Peitorais</button>
+                    <button class="muscle-btn" data-group="back">Dorsais</button>
+                    <button class="muscle-btn" data-group="arms">Braços</button>
+                    <button class="muscle-btn" data-group="legs">Pernas</button>
+                    <button class="muscle-btn" data-group="core">Core</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Animação:</label>
+                <div class="button-group">
+                    <button id="playBtn" class="control-btn">▶ Play</button>
+                    <button id="pauseBtn" class="control-btn">⏸ Pause</button>
+                    <button id="resetBtn" class="control-btn">🔄 Reset</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Velocidade:</label>
+                <input type="range" id="speedSlider" min="0.1" max="2" step="0.1" value="1">
+                <span id="speedValue">1.0x</span>
+            </div>
+        </div>
+
+        <!-- 3D Scene Container -->
+        <div id="scene-container">
+            <canvas id="canvas3d"></canvas>
+        </div>
+
+        <!-- Information Panel -->
+        <div id="info-panel" class="info-panel">
+            <h3 id="muscle-name">Sistema Muscular</h3>
+            <p id="muscle-description">Clique em um músculo para ver informações detalhadas.</p>
+            <div id="muscle-details"></div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Carregando modelo 3D...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
