@@ -1,0 +1,36 @@
+{
+  "name": "sistema-muscular-3d",
+  "version": "1.0.0",
+  "description": "Animação 3D interativa do sistema muscular masculino e feminino",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -o",
+    "dev": "npx live-server --port=8080 --open=/index.html",
+    "build": "echo 'Build completed - static files ready for deployment'"
+  },
+  "keywords": [
+    "3d",
+    "anatomia",
+    "muscular",
+    "threejs",
+    "educação",
+    "medicina",
+    "biologia"
+  ],
+  "author": "Sistema Muscular 3D",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.128.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
