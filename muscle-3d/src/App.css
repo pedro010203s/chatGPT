@@ -1,0 +1,56 @@
+/* Layout base para a cena e o painel */
+.app-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas-wrap {
+  position: absolute;
+  inset: 0;
+}
+
+.controls-panel {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(16, 16, 20, 0.7);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #eaeaea;
+  backdrop-filter: blur(6px);
+}
+
+.controls-panel .row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls-panel .segmented {
+  display: inline-flex;
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.controls-panel button {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  color: #eaeaea;
+  cursor: pointer;
+}
+
+.controls-panel button.active {
+  background: rgba(255,255,255,0.12);
+}
+
+.label3d {
+  pointer-events: none;
+}
